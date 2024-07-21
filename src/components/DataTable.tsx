@@ -20,7 +20,7 @@ const DataTable: React.FC = () => {
 
   const cropRows = cropAggregation.map((row, index) => {
     const avgYield = row.avgYield.toFixed(2);
-    const avgCultivationArea = row.avgCultivationArea.toFixed(2);
+    const avgCultivationArea = row.avgCultivationArea.toFixed(3);
     const total = parseFloat(avgYield) + parseFloat(avgCultivationArea);
     const yieldPercentage = (parseFloat(avgYield) / total) * 100;
     const areaPercentage = (parseFloat(avgCultivationArea) / total) * 100;
